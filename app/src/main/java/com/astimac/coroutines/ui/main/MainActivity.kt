@@ -40,6 +40,8 @@ class MainActivity : DaggerAppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        setSupportActionBar(my_toolbar)
+
         viewModel = ViewModelProviders.of(this, viewModelFactory).get(MainViewModel::class.java)
         viewModel.liveData.observe(this, postsObserver)
 
@@ -49,5 +51,7 @@ class MainActivity : DaggerAppCompatActivity() {
         swipe_refresh_layout.setOnRefreshListener {
             viewModel.loadTasks()
         }
+
+        viewModel.loadTasks()
     }
 }

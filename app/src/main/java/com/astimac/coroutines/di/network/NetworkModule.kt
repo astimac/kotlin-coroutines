@@ -3,6 +3,9 @@ package com.astimac.coroutines.di.network
 import android.content.Context
 import com.astimac.coroutines.BuildConfig
 import com.astimac.coroutines.api.PostsService
+import com.astimac.coroutines.db.PostsDao
+import com.astimac.coroutines.repository.PostsRepository
+import com.astimac.coroutines.utils.NetworkManager
 import com.google.gson.Gson
 import com.jakewharton.retrofit2.adapter.kotlin.coroutines.experimental.CoroutineCallAdapterFactory
 import dagger.Module
@@ -89,4 +92,10 @@ class NetworkModule {
     @Singleton
     @Provides
     fun provideApi(retrofit: Retrofit): PostsService = retrofit.create(PostsService::class.java)
+
+    @Singleton
+    @Provides
+    fun providePostsRepository(postsService: PostsService, postsDao: PostsDao, networkManager: NetworkManager): PostsRepository {
+        return PostsRepository(postsService, postsDao, networkManager)
+    }
 }

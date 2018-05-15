@@ -1,6 +1,7 @@
 package com.astimac.coroutines.di
 
 import com.astimac.coroutines.App
+import com.astimac.coroutines.di.db.DatabaseModule
 import com.astimac.coroutines.di.network.NetworkModule
 import com.astimac.coroutines.di.vm.ViewModelFactoryModule
 import com.astimac.coroutines.di.vm.ViewModelModule
@@ -19,7 +20,8 @@ import javax.inject.Singleton
     ActivityBuilderModule::class,
     ViewModelFactoryModule::class,
     ViewModelModule::class,
-    NetworkModule::class
+    NetworkModule::class,
+    DatabaseModule::class
 ])
 interface ApplicationComponent : AndroidInjector<App> {
 
