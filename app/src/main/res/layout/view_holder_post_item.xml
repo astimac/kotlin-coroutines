@@ -15,7 +15,7 @@
         android:layout_marginTop="16dp"
         tools:text="TextView"
         android:lines="1"
-        style="@style/Base.TextAppearance.AppCompat.Title"
+        style="@style/BaseTextStyle.Title"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -26,9 +26,9 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="2dp"
         tools:text="TextView"
-        style="@style/Base.TextAppearance.AppCompat.Subhead"
+        style="@style/BaseTextStyle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/post_title_label" />

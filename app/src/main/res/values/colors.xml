@@ -9,5 +9,6 @@
     <color name="colorBackgroundDark">#E1E2E1</color>
     <color name="colorBackgroundLight">#F5F5F6</color>
     <color name="colorTextDark">#212121</color>
+    <color name="colorTextDark70">#B3212121</color>
     <color name="colorTextLight">#F2F2F2</color>
 </resources>
